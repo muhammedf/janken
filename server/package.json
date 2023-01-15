@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "nakama-runtime": "github:heroiclabs/nakama-common"
+  },
+  "scripts": {
+    "cpn": "@powershell copy ./build/index.js ./nakamadata/modules/index.js",
+    "compile": "npx tsc",
+    "cc": "npm run compile && npm run cpn"
+  }
+}

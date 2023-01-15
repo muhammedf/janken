@@ -1,0 +1,18 @@
+{
+  "files": [
+    "./src/main.ts",
+    "./src/match_handler.ts",
+    "./src/messages.ts",
+  ],
+  "compilerOptions": {
+    "target": "es2016",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "outFile": "./build/index.js",
+    "typeRoots": [
+      "./node_modules"
+    ],
+  }
+}
