@@ -1,0 +1,88 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/rock.png" type="Texture" id=1]
+[ext_resource path="res://src/HistoryItem.cs" type="Script" id=2]
+[ext_resource path="res://assets/paper.png" type="Texture" id=3]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+
+[sub_resource type="Shader" id=2]
+code = "shader_type canvas_item;
+
+uniform float left : hint_range(0,1) = 0.1;
+uniform float right : hint_range(0,1) = 0.1;
+uniform float up : hint_range(0,1) = 0.1;
+uniform float down : hint_range(0,1) = 0.1;
+
+void fragment(){
+	float factor = 1.0;
+	float x = UV.x;
+	float y = UV.y;
+	
+	if(x < left)
+		factor = x/left;
+	if(x > 1.0 - right)
+		factor = (right - (x-(1.0-right)))/right;
+	
+	if(y < up)
+//		if(factor < 1.0) factor = 0.0;
+//		else 
+		factor *= y/up;
+	if(y > 1.0 - down)
+//		if(factor< 1.0) factor = 0.0;
+//		else 
+		factor *= (down - (y-(1.0-down)))/down;
+	
+	COLOR.a *=  factor;
+}"
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = SubResource( 2 )
+shader_param/left = 0.0
+shader_param/right = 1.0
+shader_param/up = 1.0
+shader_param/down = 0.0
+
+[node name="Control" type="GridContainer"]
+material = SubResource( 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -268.0
+margin_bottom = -536.0
+mouse_filter = 2
+columns = 2
+script = ExtResource( 2 )
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Node2D"]
+material = SubResource( 3 )
+margin_left = -26.0
+margin_top = 7.0
+margin_right = 164.0
+margin_bottom = 58.0
+mouse_filter = 2
+color = Color( 0.34902, 0.768627, 0, 1 )
+
+[node name="Me" type="TextureRect" parent="."]
+margin_right = 64.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+mouse_filter = 2
+
+[node name="Sprite" type="Sprite" parent="Me"]
+modulate = Color( 0, 0, 0, 1 )
+texture = ExtResource( 3 )
+offset = Vector2( 32, 32 )
+
+[node name="Her" type="TextureRect" parent="."]
+margin_left = 68.0
+margin_right = 132.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+mouse_filter = 2
+
+[node name="Sprite" type="Sprite" parent="Her"]
+modulate = Color( 0, 0, 0, 1 )
+texture = ExtResource( 1 )
+offset = Vector2( 32, 32 )

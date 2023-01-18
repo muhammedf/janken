@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Godough", "Godough.csproj", "{890399F8-BC27-4A4A-BC9E-A218ED5B80BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		ExportDebug|Any CPU = ExportDebug|Any CPU
+		ExportRelease|Any CPU = ExportRelease|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{890399F8-BC27-4A4A-BC9E-A218ED5B80BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{890399F8-BC27-4A4A-BC9E-A218ED5B80BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{890399F8-BC27-4A4A-BC9E-A218ED5B80BA}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{890399F8-BC27-4A4A-BC9E-A218ED5B80BA}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{890399F8-BC27-4A4A-BC9E-A218ED5B80BA}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{890399F8-BC27-4A4A-BC9E-A218ED5B80BA}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+		{890399F8-BC27-4A4A-BC9E-A218ED5B80BA}.Release|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{890399F8-BC27-4A4A-BC9E-A218ED5B80BA}.Release|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {52C766E4-C70C-4256-BE9C-AF9D079C15BD}
+	EndGlobalSection
+EndGlobal
