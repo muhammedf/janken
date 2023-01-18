@@ -1,24 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=2 format=2]
 
 [ext_resource path="res://src/History.cs" type="Script" id=2]
-[ext_resource path="res://animations/fade_out.tres" type="Animation" id=3]
-
-[sub_resource type="Animation" id=1]
-resource_name = "fade_in"
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 0.233258, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0.196078 ), Color( 1, 1, 1, 1 ) ]
-}
 
 [node name="Control" type="MarginContainer"]
+modulate = Color( 1, 1, 1, 0.196078 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = 137.0
@@ -48,10 +33,6 @@ margin_bottom = 204.0
 mouse_filter = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/fade_in = SubResource( 1 )
-anims/fade_out = ExtResource( 3 )
 
 [connection signal="mouse_entered" from="ScrollContainer" to="." method="_on_ScrollContainer_mouse_entered"]
 [connection signal="mouse_exited" from="ScrollContainer" to="." method="_on_ScrollContainer_mouse_exited"]

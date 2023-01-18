@@ -4,6 +4,8 @@ using System;
 
 public class History : MarginContainer
 {
+	private SceneTreeTween tw;
+
 	// Declare member variables here. Examples:
 	// private int a = 2;
 	// private string b = "text";
@@ -11,8 +13,7 @@ public class History : MarginContainer
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		var anim = GetNode<AnimationPlayer>("AnimationPlayer");
-		anim.Play("fade_out");
+
 	}
 
 
@@ -47,17 +48,28 @@ public class History : MarginContainer
 
 	private void _on_ScrollContainer_mouse_entered()
 	{
-		GD.Print("in");
-		var anim = GetNode<AnimationPlayer>("AnimationPlayer");
-		anim.Play("fade_in");
+		tw?.Stop();
+
+		tw = CreateTween();
+		var twe = tw.TweenProperty(this, "modulate", Colors.White, 1);
+		twe.SetTrans(Tween.TransitionType.Expo);
+		twe.SetEase(Tween.EaseType.Out);
+		tw.Play();
 	}
 
 
 	private void _on_ScrollContainer_mouse_exited()
 	{
-		GD.Print("out");
-		var anim = GetNode<AnimationPlayer>("AnimationPlayer");
-		anim.Play("fade_out");
+		tw?.Stop();
+
+		var white = Colors.White;
+		white.a = 0.2f;
+
+		tw = CreateTween();
+		var twe = tw.TweenProperty(this, "modulate", white, 1);
+		twe.SetTrans(Tween.TransitionType.Linear);
+		twe.SetEase(Tween.EaseType.In);
+		tw.Play();
 	}
 
 }
