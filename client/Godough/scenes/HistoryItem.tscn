@@ -49,7 +49,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = -268.0
 margin_bottom = -536.0
-mouse_filter = 2
 columns = 2
 script = ExtResource( 2 )
 
@@ -61,14 +60,13 @@ margin_left = -26.0
 margin_top = 7.0
 margin_right = 164.0
 margin_bottom = 58.0
-mouse_filter = 2
+mouse_filter = 1
 color = Color( 0.34902, 0.768627, 0, 1 )
 
 [node name="Me" type="TextureRect" parent="."]
 margin_right = 64.0
 margin_bottom = 64.0
 rect_min_size = Vector2( 64, 64 )
-mouse_filter = 2
 
 [node name="Sprite" type="Sprite" parent="Me"]
 modulate = Color( 0, 0, 0, 1 )
@@ -80,7 +78,6 @@ margin_left = 68.0
 margin_right = 132.0
 margin_bottom = 64.0
 rect_min_size = Vector2( 64, 64 )
-mouse_filter = 2
 
 [node name="Sprite" type="Sprite" parent="Her"]
 modulate = Color( 0, 0, 0, 1 )

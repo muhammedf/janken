@@ -8,7 +8,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = 137.0
 margin_bottom = -191.0
-mouse_filter = 2
+mouse_filter = 1
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource( 2 )
@@ -16,12 +16,13 @@ script = ExtResource( 2 )
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 margin_right = 537.0
 margin_bottom = 409.0
+mouse_filter = 1
 follow_focus = true
 
 [node name="CenterContainer" type="CenterContainer" parent="ScrollContainer"]
 margin_right = 537.0
 margin_bottom = 409.0
-mouse_filter = 2
+mouse_filter = 1
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
@@ -30,7 +31,6 @@ margin_left = 268.0
 margin_top = 204.0
 margin_right = 268.0
 margin_bottom = 204.0
-mouse_filter = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
