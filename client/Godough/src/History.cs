@@ -1,5 +1,6 @@
 using Godot;
 using Godough;
+using Godough.src;
 using System;
 
 public class History : MarginContainer
@@ -27,8 +28,8 @@ public class History : MarginContainer
 	{
 		try
 		{
-			var ps = (PackedScene)ResourceLoader.Load("res://scenes/HistoryItem.tscn");
-			var hi = ps.Instance<HistoryItem>();
+			var hiscene = ResourceManager.Ins.Load<PackedScene>("res://scenes/HistoryItem.tscn", true);
+            var hi = hiscene.Instance<HistoryItem>();
 			hi.Init(me, her, res);
 
 			var stackNode = GetNode("ScrollContainer/CenterContainer/Stack");

@@ -1,5 +1,6 @@
 using Godot;
 using Godough;
+using Godough.src;
 using System;
 
 public class HistoryItem : GridContainer
@@ -49,8 +50,7 @@ public class HistoryItem : GridContainer
 		}
 
 		var sprite = GetNode<Sprite>(who+"/Sprite");
-		sprite.Texture = ResourceLoader.Load<Texture>("res://assets/" + fileName);
-		//sprite.Modulate = Colors.Black;
+		sprite.Texture = ResourceManager.Ins.Load<Texture>("res://assets/" + fileName, true);
 	}
 
 	//  // Called every frame. 'delta' is the elapsed time since the previous frame.
